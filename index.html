@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Para el mejor padre 💖</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!-- Fondo animado -->
+<div id="fondo"></div>
+
+<!-- Intro -->
+<div id="intro" class="intro">
+    <h1 id="titulo">Para el mejor padre del mundo ❤️</h1>
+    <button id="start-btn">Entrar</button>
+</div>
+
+<!-- Galería mágica -->
+<section id="galeria" class="galeria-section" hidden>
+    <h2 id="titulo-galeria">Te quiero 💖</h2>
+    <div class="grid">
+        <script>
+            for(let i=1;i<=18;i++){
+                document.write(`<div class="foto" onclick="abrirFoto(${i})"><img src="images/${i}.jpg" alt="Recuerdo ${i}"></div>`);
+            }
+        </script>
+    </div>
+</section>
+
+<!-- Visor (modal) -->
+<div id="visor" class="visor" aria-hidden="true">
+    <button class="cerrar" aria-label="Cerrar" onclick="cerrarFoto()">✖</button>
+    <img id="foto-grande" src="" alt="Foto ampliada" />
+    <p id="texto-grande"></p>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
